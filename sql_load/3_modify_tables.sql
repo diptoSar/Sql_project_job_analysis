@@ -25,18 +25,18 @@ NOTE: If you are having issues with permissions. And you get error:
 
 -- NOTE: This has been updated from the video to fix issues with encoding
 
-COPY company_dim
-FROM 'C:\Program Files\PostgreSQL\16\data\Datasets\sql_course\company_dim.csv'
-WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
+copy company_dim
+from 'C:\DIPTO\Sql_project_job_analysis\csv_files\company_dim.csv'
+delimiter ',' csv header;
 
-COPY skills_dim
-FROM 'C:\Program Files\PostgreSQL\16\data\Datasets\sql_course\skills_dim.csv'
-WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
+copy job_postings_fact
+from 'C:\DIPTO\Sql_project_job_analysis\csv_files\job_postings_fact.csv'
+delimiter ',' csv header;
 
-COPY job_postings_fact
-FROM 'C:\Program Files\PostgreSQL\16\data\Datasets\sql_course\job_postings_fact.csv'
-WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
+copy skills_dim 
+from 'C:\DIPTO\Sql_project_job_analysis\csv_files\skills_dim.csv'
+delimiter ',' csv header;
 
-COPY skills_job_dim
-FROM 'C:\Program Files\PostgreSQL\16\data\Datasets\sql_course\skills_job_dim.csv'
-WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
+copy skills_job_dim
+from 'C:\DIPTO\Sql_project_job_analysis\csv_files\skills_job_dim.csv'
+delimiter ',' csv header;
